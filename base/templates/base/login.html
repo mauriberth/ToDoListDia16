@@ -1,0 +1,18 @@
+{% extends 'base/principal.html' %} 
+{% block content %} 
+
+<div class="navbar-sup">
+  <h1>¡Bienvenido a tu lista de pendientes!</h1>
+</div>
+<div class="tarjet-body">
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+
+    <input class="button" type="submit" value="Iniciar Sesión" />
+  </form>
+  <p>¿No tienes cuenta?<a href="{% url 'register' %}">Crea una.</a></p>
+</div>
+<footer>
+  <h4>@author: López Vera Mauricio Alberto - SmartyDreams DevOps 2022</h4>
+</footer>
+{% endblock content %}

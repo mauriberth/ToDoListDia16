@@ -1,0 +1,18 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+    <div class="navbar-sup">
+        <a href="{% url 'tasks' %}">&#x2B05;</a>
+    </div>
+
+    <div class="tarjet-body">
+        <form method="post" action="">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <input class="button" type="submit" value="Send">
+        </form>
+    </div>
+
+{% endblock content %}

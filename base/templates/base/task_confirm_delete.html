@@ -1,0 +1,15 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+    <div class="navbar-sup">
+        <a href="{% url 'tasks' %}">&#x2B05;</a>
+    </div>
+
+    <div class="tarjet-body">
+        <form method="post">
+        {% csrf_token %}
+        <p>Are you sure? delete "{{ tasks }}"</p>
+        <input class="button" type="submit" value="Delete">
+    </form>
+    </div>
+
+{% endblock content %}

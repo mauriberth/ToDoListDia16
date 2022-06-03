@@ -1,0 +1,23 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+    <div class="navbar-sup">
+        <h1>Register!</h1>
+    </div>
+
+    <div class="tarjet-body">
+        <form method="post">
+            {% csrf_token %}
+            <label>{{ form.username.label }}</label>
+            {{ form.username }}
+            <label>{{ form.password1.label }}</label>
+            {{ form.password1 }}
+            <label>{{ form.password2.label }}</label>
+            {{ form.password2 }}
+
+            <input style="margin-top: 10px; text-align: center" class="button" type="submit" value="Sign In">
+        </form>
+        <p>Already have an account?<a href="{% url 'login' %}"> Sign in →</a></p>
+    </div>
+
+{% endblock content %}
