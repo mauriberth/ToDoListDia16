@@ -1,39 +1,47 @@
-# To Do List Django's Project
+# ToDoList con DJango. 
 
 This repo is for create a list for to do, you can add new tasks and create users
 
-## Prerequisites
-Install python
+## Pre-requisitos
+Instalar Python.
 ```zsh
 sudo apt-get install python3
 ```
 
-Then you can install a virtual environment
+Instalar el entorno virtual.
 ```zsh
 pip install virtualenv
 ```
 
-## Installation
-1. clone the repository
-2. Go to folder in your terminal 
-3. Run the command
+## Instalación.
+1. Clonar el repositorio.
+2. Abra el folder de la carpeta.
+3. Corra el compando:
 ```zsh
 python3 -m venv venv
 ```
-4. Activates the virtual environment
+4. Active el entorno virtual (LINUX):
 ```zsh
 source venv/bin/activate
 ```
-5. Run migrations
+4.1 Active el entorno virtual (WINDOWS):
+```zsh
+venv/Scripts/activate
+```
+5.Cree las migaciones:
+```zsh
+python manage.py makemigrations
+```
+6. Ejecute las migraciones.
 ```zsh
 python manage.py migrate
 ```
-6. Start app base
+7. Inicie la app base.
 ```zsh
 python manage.py startapp base
 ```
 
-7. Now you can start the server
+8. Inicie el servidor.
 ```zsh
 python manage.py runserver
 ```
